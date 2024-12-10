@@ -1,0 +1,244 @@
+body {
+    background-color: rgb(255, 250, 244);
+    margin: 0px;
+    font-family: 'Courgette';
+}
+
+header {
+    background-color: white;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px; /* Ajoutez du padding pour éviter que le contenu ne touche les bords */
+    font-size: larger;
+}
+
+.logo {
+    height: 80%; /* Ajustez la hauteur du logo pour qu'il s'adapte au header */
+    margin-right: 20px; /* Ajoutez de l'espace entre le logo et la navigation */
+}
+
+.nav-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0 10px; /* Ajoutez de l'espace entre les éléments de la liste */
+}
+
+nav li a {
+    color: black;
+    text-decoration: none;
+}
+
+footer {
+    background-color: black;
+    height: 10vh;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px; /* Ajoutez du padding pour éviter que le contenu ne touche les bords */
+}
+
+footer ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer li {
+    margin: 0 15px; /* Ajoutez de l'espace entre les éléments de la liste */
+}
+
+.container {
+    display: flex;
+    align-items: center; /* Centre verticalement les éléments */
+    margin: 20px;
+    flex-wrap: wrap; /* Ajout pour permettre le retour à la ligne */
+}
+
+.portrait {
+    width: 50%;
+    margin-right: 20px; /* Ajoutez de l'espace entre l'image et le texte */
+}
+
+.text-container {
+    width: 50%;
+}
+
+.description {
+    margin: 20px 0;
+}
+
+.grid-boutique {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin: 20px;
+}
+
+.grid-boutique a {
+    display: block;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%; /* 1:1 aspect ratio */
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-boutique img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; /* Centre l'image */
+    transform: translate(-50%, -50%); /* Centre l'image */
+}
+
+.grid-portefolio {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin: 20px;
+}
+
+.grid-portefolio a {
+    display: block;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%; /* 1:1 aspect ratio */
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-portefolio img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; /* Centre l'image */
+    transform: translate(-50%, -50%); /* Centre l'image */
+}
+
+p {
+    margin: 20px;
+}
+
+h1 {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.courgette-regular {
+    font-family: "Courgette", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.portefolio {
+    background-color: black;
+    margin: none;
+    padding: none;
+}
+
+.portefolio h1 {
+    color: antiquewhite;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-container {
+        justify-content: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portrait {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .text-container {
+        width: 100%;
+    }
+
+    .grid-boutique, .grid-portefolio {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    .logo {
+        height: 60%;
+    }
+
+    nav li {
+        margin: 5px 0;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    footer li {
+        margin: 5px;
+    }
+
+    .container {
+        margin: 10px;
+    }
+
+    .portrait {
+        margin-bottom: 10px;
+    }
+
+    .description {
+        margin: 10px 0;
+    }
+
+    p {
+        margin: 10px;
+    }
+
+    h1 {
+        margin: 10px 0;
+    }
+}
